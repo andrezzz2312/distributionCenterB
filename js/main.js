@@ -1318,7 +1318,7 @@ function setFontSizes() {
 	globalMediumTitleFontvar = `calc(7px + (35 - 7) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
-	globalBigTitleFontvar = `calc(8px + (40 - 8) * ((${
+	globalBigTitleFontvar = `calc(8px + (35 - 8) * ((${
 		containVideoWidth + 'px'
 	} - 320px) / (1440 - 320)))`
 
