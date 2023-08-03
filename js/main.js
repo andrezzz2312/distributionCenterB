@@ -82,13 +82,6 @@ const quality = document.querySelector('#quality_button')
 const mainMenuB = document.querySelectorAll('.mainMenuB')
 const titulo = document.querySelectorAll('.titulo')
 
-// let details = navigator.userAgent
-// let regexp = /android|iphone|kindle|ipad/i
-// let ios = /iphone|ipad/i
-// let macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i
-// let isMobileDevice = regexp.test(details)
-// let isIOS = ios.test(details)
-// let isMac = macosPlatforms.test(details)
 let isMobile = false
 window.mobileCheck = function () {
 	let mobile = (function (a) {
@@ -111,21 +104,6 @@ if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
 } else {
 	isIOS = false
 }
-
-// var buttonsText = []
-
-// mainMenuB.forEach((e, i) => {
-// const splitText = e.textContent.trim().split('\n')
-// const splitText = e.textContent
-// 	.replace(/[\n\r]+|[\s]{2,}/g, ' ')
-// 	.trim()
-// 	.split(' ')
-// splitText[1]
-// 	? (buttonsText[i] =
-// 			splitText[0].toLowerCase() + splitText[1].substring(0, 2))
-// 	: (buttonsText[i] = splitText[0].toLowerCase())
-// console.log(buttonsText[i])
-// })
 
 const buttonContent = {
 	turnlock10: {
@@ -249,7 +227,7 @@ const buttonContent = {
 
 				content: [
 					`Credential or biometric is presented`,
-					`Valid credential turns LED green, unlocks turnstile and provides (tone/voice)`,
+					`Valid credential turns LED green, unlocks turnstile and provides audio signal (tone/voice)`,
 					`User walks through metal detector`,
 					`If no metal is detected, turnstile unlocks, rotates 120\u00B0, then stops and relocks`,
 					`If metal is detected, turnstile remains locked and alarm sounds`,
@@ -690,16 +668,6 @@ if (!isMobile) {
 } else if (isIOS) {
 	fullscreen_button.style.display = 'none'
 }
-
-// else {
-// if (isIOS) {
-// 	fullscreen_button.style.display = 'none'
-// }
-// }
-
-// if (isMac) {
-// 	alertdiv.style.display = 'flex'
-// }
 
 // Set which videos are going to swap
 function InterpolateVideo(videoToPause, videoToVanish, videoToPlay) {
