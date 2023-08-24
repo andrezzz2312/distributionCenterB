@@ -1413,9 +1413,8 @@ function backButtonFunction() {
 			video1.remove()
 			video2.remove()
 			video3.remove()
+			HideShowMainButtons()
 		}, 500)
-
-		HideShowMainButtons()
 
 		loop.style.zIndex = '-1'
 		if (subVideo1) {
@@ -1446,7 +1445,7 @@ function backButtonFunctionFromBack() {
 		console.log('subVideoTurn ending')
 		loop.classList.remove('short-vanish')
 		loop.classList.add('show')
-		HideShowMainButtons()
+
 		setTimeout(() => {
 			loop.play()
 		}, 0)
@@ -1467,6 +1466,7 @@ function backButtonFunctionFromBack() {
 		video1.remove()
 		video2.remove()
 		video3.remove()
+		HideShowMainButtons()
 		showCont.innerHTML = ''
 	})
 }
